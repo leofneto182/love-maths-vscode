@@ -14,7 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }
     });
     }
-
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    });
     runGame('addition');
 });
 
@@ -24,6 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
 */
 
 function runGame(gameType){
+
+    // Clear the answer box.
+    document.getElementById('answer-box').value = "";
+    /**The user does not need to click on the answer box to type a new answer again,
+     * the focus() function will do it automatically.
+    */
+    document.getElementById('answer-box').focus();
 
     //Creates two random numbers between 1 and 25.
     let num1 = Math.floor(Math.random() * 25) + 1;
