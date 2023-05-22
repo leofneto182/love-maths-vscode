@@ -66,12 +66,12 @@ body {
 }
 
 .answer-message {
-    display: none;
+    display: block;
     font-size: 1rem;
 }
 
 #answer-box {
-    border: none;
+    border-radius: 10px;
     color: #445361;
     display: inline-block;
     height: 40px;
@@ -177,13 +177,74 @@ body {
 
 /* --------- Media queries */
 
-@media (max-width: 414px) {
+@media (max-width: 1920px) {
+
+    .game-area{
+        max-height: 60vh;
+    }
+}
+@media (max-width: 1200px) {
+
+    .game-area{
+        max-height: 60vh;
+    }
+}
+
+@media (max-width: 950px) {
+    .game-area {
+        max-height: 50vh;
+    }
+
     .controls-area {
-        width: 100%;
+        width: 75%;
+        margin: 10px auto;
     }
 
     .btn--big {
-        margin: 0 10px;
+        margin: 30px 10px;
+    }
+    .question-area {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 806px){
+
+    .game-area {
+        max-height: 70vh;
+    }
+
+    .btn--gray {
+        margin-top: 10px;
+    }
+
+    .question-area span {
+        padding: 0;
+        margin-top: 100px;
+    }
+
+    .scores {
+        
+        margin: 0.5em auto;
+        display: block;
+        padding: 5px;
+        
+    }
+}
+
+
+
+@media (max-width: 425px) {
+
+    .game-area{
+        height: 45vh;
+    }
+    .controls-area {
+       height: 12vh;
+    }
+
+    .btn--big {
+        margin: 10px 10px;
         padding: 5px;
         border: 5px solid;
         width: 50px;
@@ -202,6 +263,7 @@ body {
     }
 
     .question-area span {
+        font-size: 30px;
         padding: 0;
     }
 
@@ -234,19 +296,24 @@ body {
 
 @media (max-width: 320px) {
     .game-area {
-        height: 70vh;
+        height: 40vh;
     }
 
-    .controls-area {
-        width: 75%;
-        margin: 10px auto;
+    .question-area span {
+        margin-top: 200px;
+        font-size: 25px;
+        padding: 0;
     }
 
-    .btn--big {
-        margin: 10px 10px;
+    .btn--gray {
+        width: 180px;
+        height: 40px;
+        border-radius: 20px;
+        margin-top: 1%;
     }
-    .question-area {
-        padding: 10px 0;
-    }
+
+
+
+
 
 }
